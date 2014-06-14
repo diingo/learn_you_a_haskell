@@ -19,6 +19,18 @@ phoneNumber (Person _ _ _ _ number _) = number
 flavor :: Person -> String
 flavor (Person _ _ _ _ _  flavor) = flavor
 
+--------------------------
+-- Using Record Syntax
+--------------------------
+
+data Person' = Person' {
+  firstName' :: String
+  , lastName' :: String
+  , age' :: Int
+  , height' :: Float
+  , phoneNumber' :: String
+  , flavor' :: String
+} deriving (Show)
 
 
 
