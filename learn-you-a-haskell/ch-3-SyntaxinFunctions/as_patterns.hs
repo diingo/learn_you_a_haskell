@@ -1,3 +1,7 @@
 firstLetter :: String -> String
-firstLetter "" = "Empty string, let's get a drink and break dance!"
-firstLetter wholeString@(firstChar:theRest) = "The first letter of " ++ wholeString ++ " is " ++ [firstChar]
+firstLetter "" = "Empty as a dry well"
+firstLetter all@(x:xs) = "First letter of " ++ all ++ " is " ++ [x]
+
+lastLetter :: String -> String
+lastLetter [] = "Got nuthin', do nuthin'"
+lastLetter str = "Last letter of " ++ str ++ " is " ++ [last str]
