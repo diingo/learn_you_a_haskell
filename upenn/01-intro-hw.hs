@@ -1,3 +1,7 @@
+---------------
+-- Exercise 1
+---------------
+
 toDigits :: Integer -> [Integer]
 toDigits n
   | n <= 0 = []
@@ -19,9 +23,24 @@ rev :: [Integer] -> [Integer]
 rev [] = []
 rev (x:xs) = (rev xs) ++ [x]
 
+---------------
+-- Exercise 2
+---------------
+doubleEveryOther :: [Integer] -> [Integer]
+doubleEveryOther n
+  | length n <= 1 = n
+  | otherwise = doubleEveryOther (init (init n)) ++ [doubleOther n] ++ [last n]
+  where
+    doubleOther n = (last (init n)) * 2
 
 
---readInt n = read (map (:"") n)
+--split :: [a] -> [[a]]
+--split [] = []
+--split xs
+--  | length pair == 2 = []
 
---dot :: (b -> c) -> (a -> b) -> a -> c
---dot f g x = f (g x)
+--doubleEveryOther' :: [Integer] -> [Integer]
+--doubleEveryOther' [] = []
+--doubleEveryOther' [x] = [x]
+--doubleEveryOther' [x,y] = [x * 2, y]
+--doubleEveryOther' (x:(y:ys)) = x * 2 : y : doubleEveryOther' ys
